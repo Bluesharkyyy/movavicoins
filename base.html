@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Подключение шрифта Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movavi.sell</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(0, 0, 255); /* Синий фон */
+            color: white; /* Белый текст для контраста */
+            font-family: 'Open Sans', Arial, sans-serif; /* Шрифт Open Sans */
+        }
+
+        /* Черный прямоугольник сверху */
+        .header {
+            background-color: rgb(41, 36, 36); /* Черный фон */
+            padding: 20px; /* Отступы внутри прямоугольника */
+            display: flex;
+            justify-content: center; /* Центрирование по горизонтали */
+            align-items: center; /* Выравнивание по вертикали */
+            position: relative; /* Для позиционирования ссылок */
+        }
+
+        /* Ссылка "На главную" слева */
+        .home-link {
+            position: absolute; /* Абсолютное позиционирование */
+            left: 20px; /* Отступ слева */
+            color: white; /* Белый цвет текста */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-size: 2em; /* Размер текста */
+            font-family: 'Open Sans', Arial, sans-serif; /* Шрифт Open Sans */
+        }
+
+        .home-link:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        /* Стили для заголовка */
+        h1 {
+            font-size: 3em; /* Размер заголовка */
+            margin: 0; /* Убираем отступы */
+            font-family: 'Open Sans', Arial, sans-serif; /* Шрифт Open Sans */
+        }
+
+        /* Контейнер для ссылок справа */
+        .header-links {
+            position: absolute; /* Абсолютное позиционирование */
+            right: 20px; /* Отступ справа */
+        }
+
+        /* Стили для ссылок справа */
+        .header-links a {
+            color: white; /* Белый цвет текста ссылок */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-size: 1.5em; /* Размер ссылок */
+            margin-left: 20px; /* Отступ между ссылками */
+            font-family: 'Open Sans', Arial, sans-serif; /* Шрифт Open Sans */
+        }
+
+        .header-links a:hover {
+            text-decoration: underline; /* Подчеркивание при наведении */
+        }
+
+        /* Белый прямоугольник с текстом */
+        .text-box {
+            background-color: white; /* Белый фон */
+            padding: 60px; /* Внутренние отступы */
+            border-radius: 15px; /* Закругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+            text-align: center; /* Текст по центру */
+            font-size: 1.5em; /* Размер текста */
+            color: black; /* Черный цвет текста */
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 70px; /* Отступ сверху */
+            font-family: 'Open Sans', Arial, sans-serif; /* Шрифт Open Sans */
+        }
+
+        /* Окно регистрации */
+        .login-box {
+            background-color: white; /* Белый фон */
+            padding: 80px; /* Внутренние отступы */
+            border-radius: 15px; /* Закругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+            text-align: center; /* Текст по центру */
+            max-width: 700px;
+            margin: auto;
+            margin-top: 200px;
+            font-family: 'Open Sans', Arial, sans-serif; /* Шрифт Open Sans */
+        }
+
+        /* Стили для заголовка */
+        .login-box h2 {
+            margin-bottom: 50px; /* Отступ снизу */
+            font-size: 3.8em; /* Размер текста */
+            color: black /* Черный цвет текста */
+
+        }
+
+        /* Стили для полей ввода */
+        .login-box input {
+            width: 100%; /* Ширина поля ввода */
+            padding: 25px; /* Внутренние отступы */
+            margin-bottom: 50px; /* Отступ снизу */
+            border: 1px solid #ccc; /* Граница поля */
+            border-radius: 5px; /* Закругленные углы */
+            font-size: 2em; /* Размер текста */
+        }
+
+        /* Стили для кнопки */
+        .login-box button {
+            width: 100%; /* Ширина кнопки */
+            padding: 10px; /* Внутренние отступы */
+            background-color: blue; /* Синий фон */
+            color: white; /* Белый текст */
+            border: none; /* Убираем границу */
+            border-radius: 5px; /* Закругленные углы */
+            font-size: 2.2em; /* Размер текста */
+            cursor: pointer; /* Курсор в виде указателя */
+        }
+
+        .login-box button:hover {
+            background-color: darkblue; /* Темно-синий фон при наведении */
+        }
+
+        .register-box {
+            background-color: white; /* Белый фон */
+            padding: 80px; /* Внутренние отступы */
+            border-radius: 15px; /* Закругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+            text-align: center; /* Текст по центру */
+            max-width: 700px;
+            margin: auto;
+            margin-top: 200px;
+            font-family: 'Open Sans', Arial, sans-serif; /* Шрифт Open Sans */
+        }
+
+        /* Стили для заголовка */
+        .register-box h2 {
+            margin-bottom: 50px; /* Отступ снизу */
+            font-size: 3.8em; /* Размер текста */
+            color: black /* Черный цвет текста */
+
+        }
+
+        /* Стили для полей ввода */
+        .register-box input {
+            width: 100%; /* Ширина поля ввода */
+            padding: 25px; /* Внутренние отступы */
+            margin-bottom: 50px; /* Отступ снизу */
+            border: 1px solid #ccc; /* Граница поля */
+            border-radius: 5px; /* Закругленные углы */
+            font-size: 2em; /* Размер текста */
+        }
+
+        /* Стили для кнопки */
+        .register-box button {
+            width: 100%; /* Ширина кнопки */
+            padding: 10px; /* Внутренние отступы */
+            background-color: blue; /* Синий фон */
+            color: white; /* Белый текст */
+            border: none; /* Убираем границу */
+            border-radius: 5px; /* Закругленные углы */
+            font-size: 2.2em; /* Размер текста */
+            cursor: pointer; /* Курсор в виде указателя */
+        }
+
+        .register-box button:hover {
+            background-color: darkblue; /* Темно-синий фон при наведении */
+        }
+
+
+        /* Белый прямоугольник */
+        .payment-box {
+            background-color: white; /* Белый фон */
+            margin: auto;
+            padding: 80px; /* Внутренние отступы */
+            border-radius: 15px; /* Закругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+            width: 1000px; /* Ширина прямоугольника */
+            text-align: center; /* Текст по центру */
+        }
+
+        /* Заголовок */
+        .payment-box h2 {
+            margin-bottom: 60px; /* Отступ снизу */
+            font-size: 4.8em; /* Размер текста */
+            color: #333; /* Темно-серый цвет текста */
+        }
+
+        /* Поля ввода */
+        .payment-box input {
+            width: 100%; /* Ширина поля ввода */
+            padding: 40px; /* Внутренние отступы */
+            margin-bottom: 15px; /* Отступ снизу */
+            border: 1px solid #ccc; /* Граница поля */
+            border-radius: 5px; /* Закругленные углы */
+            font-size: 3em; /* Размер текста */
+        }
+
+        /* Кнопка */
+        .payment-box button {
+            width: 100%; /* Ширина кнопки */
+            padding: 10px; /* Внутренние отступы */
+            background-color: #007bff; /* Синий фон */
+            color: white; /* Белый текст */
+            border: none; /* Убираем границу */
+            border-radius: 5px; /* Закругленные углы */
+            font-size: 3.2em; /* Размер текста */
+            cursor: pointer; /* Курсор в виде указателя */
+        }
+
+        .payment-box button:hover {
+            background-color: #0056b3; /* Темно-синий фон при наведении */
+        }
+
+        /* Белый прямоугольник */
+        .box {
+            background-color: white; /* Белый фон */
+            padding: 80px; /* Внутренние отступы */
+            border-radius: 15px; /* Закругленные углы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+            width: 400px; /* Ширина прямоугольника */
+            text-align: center; /* Текст по центру */
+            margin: 10px 0; /* Отступы между прямоугольниками */
+
+        }
+
+        /* Заголовок */
+        .box h2 {
+            margin: 0; /* Убираем отступы */
+            font-size: 3.5em; /* Размер текста */
+            color: #333; /* Темно-серый цвет текста */
+        }
+
+        /* Текст с количеством коинов */
+        .box p {
+            font-size: 2.2em; /* Размер текста */
+            color: #555; /* Серый цвет текста */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Черный прямоугольник с заголовком и ссылками -->
+    <div class="header">
+        <!-- Ссылка "На главную" слева -->
+        <a href="/" class="home-link">На главную</a>
+        <h1>Movavi.sell</h1>
+        <div class="header-links">
+            {% if user %}
+            <a href="/logout">Выйти</a>
+            <a href="/buy">Купить</a>
+            <a href="/profile">Профиль</a>
+            {% else %}
+            <a href="/login">Войти</a>
+            <a href="/register">Зарегистрироваться</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Остальное содержимое сайта -->
+    <div style="padding: 20px;">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

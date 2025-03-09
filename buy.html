@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="payment-box">
+    <h2>Оплата</h2>
+    <form>
+        <input type="number" placeholder="Количество" name="kol_vo" required>
+        <input type="text" placeholder="Номер карты" name="nomer" required>
+        <input type="text" placeholder="Срок годности (MM/YY)" name="date" required>
+        <input type="text" placeholder="Код сзади" name="code" required>
+        <button type="submit">Оплатить</button>
+     </form>
+</div>
+
+
+{% endblock %}
