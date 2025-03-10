@@ -1,6 +1,7 @@
 from flask import Flask, render_template, session, redirect, request
 import secrets
 from user import create_user_table, User
+from payment import Pay_user, create_user_pay_table
 
 create_user_table()
 
@@ -82,11 +83,21 @@ def profile_page():
     user = User.get_user_by_username(username)
     return render_template("profile.html", user=user)
 
-@app.route("/buy")
+@app.route("/buy", methods=['POST','GET'])
 def buy_page():
     username = session.get("username")
     if not username:
         return redirect("login")
+    
+    if request.method == 'POST':
+        quanity = request.form.get(quanity)
+        nomer = request.form.get(nomer)
+        date = request.form.get(date)
+        code = request.form.get(code)
+
+        Pay_user.create_pay(quanity, nomer, date, code)
+        return redirect('/profile')
+
     user = User.get_user_by_username(username)
     return render_template("buy.html", user=user)
 
